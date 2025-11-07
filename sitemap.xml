@@ -1,35 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- URL Principal do seu site de página única -->
-  <url>
-    <loc>https://sosmaquinasdelavarroupa.com.br/</loc>
-    <lastmod>2025-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    
-    <!-- Informando ao Google sobre as imagens importantes na sua página -->
-    <image:image>
-      <image:loc>https://sosmaquinasdelavarroupa.com.br/logo.avif</image:loc>
-      <image:title>Logo SOS Máquinas</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://sosmaquinasdelavarroupa.com.br/maquinas-banner.avif</image:loc>
-      <image:title>Técnico consertando máquina de lavar em Bragança Paulista</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://sosmaquinasdelavarroupa.com.br/carro.avif</image:loc>
-      <image:title>Carro de Serviço da SOS Máquinas em Bragança Paulista</image:title>
-    </image:image>
-     <image:image>
-      <image:loc>https://sosmaquinasdelavarroupa.com.br/m1.avif</image:loc>
-      <image:title>Conserto de Máquina de Lavar Brastemp</image:title>
-    </image:image>
-     <image:image>
-      <image:loc>https://sosmaquinasdelavarroupa.com.br/m2.avif</image:loc>
-      <image:title>Conserto de Máquina de Lavar Consul</image:title>
-    </image:image>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Página Principal -->
+    <url>
+        <loc>https://sosmaquinasdelavarroupa.com.br/</loc>
+        <lastmod>2025-11-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
 </urlset>
