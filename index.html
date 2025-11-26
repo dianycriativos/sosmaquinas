@@ -1,10 +1,12 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
     <!-- Meta Tags Essenciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-    <!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags (PRESERVADAS) -->
     <title>Conserto de Máquina de Lavar em Bragança Paulista - SOS Máquinas</title>
     <meta name="description" content="Assistência técnica especializada em Brastemp, Consul, Electrolux, LG e Samsung. Atendimento rápido, eficiente e com garantia em Bragança Paulista. Faça seu orçamento!">
     <meta name="robots" content="index, follow">
@@ -31,9 +33,9 @@
     <!-- Geographic Meta Tags para SEO Local -->
     <meta name="geo.placename" content="Bragança Paulista">
     <meta name="geo.region" content="BR-SP">
-    <meta name="geo.position" content="-22.879948;-46.541484"> <!-- Coordenadas ajustadas do seu JSON-LD original -->
+    <meta name="geo.position" content="-22.879948;-46.541484">
         
-    <!-- JSON-LD Schema Markup - LocalBusiness (CRÍTICO para negócio local) -->
+    <!-- JSON-LD Schema Markup (PRESERVADO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,8 +73,6 @@
       ]
     }
     </script>
-        
-    <!-- JSON-LD Schema Markup - Service (IMPORTANTE) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -89,8 +89,6 @@
       "description": "Assistência técnica especializada em máquinas de lavar das principais marcas"
     }
     </script>
-        
-    <!-- JSON-LD Schema Markup - Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -103,546 +101,954 @@
         "@type": "ContactPoint",
         "contactType": "Customer Service",
         "telephone": "+5511978036428",
-        "email": "[SEU EMAIL]"
+        "email": "contato@sosmaquinas.com.br"
       }
     }
     </script>
 
-    <!-- Tailwind CSS e Fontes (Mantido do seu original) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Nova Tipografia Premium: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Favicon (Mantido do seu original) -->
+    <!-- Favicon -->
     <link rel="icon" href="logo.avif" type="image/avif">
     
-    <!-- Estilos (Mantido do seu original) -->
     <style>
-        /* Estilos Globais */
+        /* --- 1. TIPOGRAFIA & BASES --- */
         html { scroll-behavior: smooth; }
         body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #FFFFFF; 
-            overflow-x: hidden; /* Remove a rolagem horizontal */
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #f5f7fa; 
+            overflow-x: hidden;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
         }
-        .bg-primary-dark { background-color: #1E2B4B; }
+
+        /* Títulos */
+        h1, h2, h3, h4, h5, h6 { letter-spacing: -0.02em; }
+        h1 { letter-spacing: -0.03em; }
+        p { line-height: 1.8; }
+
+        /* Cores da Marca */
         .text-primary-dark { color: #1E2B4B; }
-        .bg-accent-yellow { background-color: #F0B800; }
         .text-accent-yellow { color: #F0B800; }
+        .bg-primary-dark { background-color: #1E2B4B; }
 
-        /* Barra de Rolagem Personalizada (Azul e Amarelo) */
-        ::-webkit-scrollbar {
-            width: 12px;
+        /* Scrollbar Premium */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { 
+            background: linear-gradient(180deg, #1E2B4B 0%, #2a3d5a 100%); 
+            border-radius: 10px; 
+            border: 2px solid #f1f1f1;
         }
-        ::-webkit-scrollbar-track {
-            background: #1E2B4B; /* Fundo azul */
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: #F0B800; /* Polegar amarelo */
-            border-radius: 20px;
-            border: 3px solid #1E2B4B; /* Borda azul em volta */
-        }
-
-        /* Botão flutuante do WhatsApp com notificação */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25D366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .notification-badge {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: red;
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: bold;
-            border: 2px solid white;
-        }
-
-        /* Acordeão FAQ */
-        .accordion-header { cursor: pointer; }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; padding: 0 1rem; }
-        .accordion-content.active { max-height: 500px; padding-top: 0.5rem; padding-bottom: 1rem; }
-        .accordion-header .fa-chevron-down { transition: transform 0.3s ease-out; }
-        .accordion-header.active .fa-chevron-down { transform: rotate(180deg); }
-
-        /* Carrossel de Imagens (Sobre Nós) */
-        .image-scroll-container { overflow: hidden; position: relative; height: 300px; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
-        .image-scroll-wrapper { display: flex; height: 100%; transition: transform 0.5s ease-in-out; will-change: transform; }
-        .image-scroll-wrapper img { width: 100%; height: 100%; object-fit: contain; background-color: #f0f0f0; flex-shrink: 0; }
-
-        /* Menu Mobile */
-        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: #1E2B4B; z-index: 50; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        .mobile-menu.active { display: block; }
-        .mobile-menu a { display: block; padding: 1rem; text-align: center; color: white; border-bottom: 1px solid #3c4b7b; }
-        .mobile-menu a:hover { background-color: #F0B800; color: #1E2B4B; }
         
-        /* Carrossel Genérico (Serviços e Avaliações) */
-        .carousel-container {
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
+        /* Utilitário para esconder scrollbar no carrossel de reviews mas manter funcionalidade */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        .carousel-container::-webkit-scrollbar { display: none; }
-        .carousel-wrapper {
-            display: flex;
-            flex-wrap: nowrap;
+
+        /* --- 2. GLASSMORPHISM (EFEITO VIDRO) --- */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
         }
-        .carousel-item {
-            flex: 0 0 85%;
-            scroll-snap-align: center;
-            margin-right: 1rem;
+
+        .glass-dark {
+            background: rgba(30, 43, 75, 0.85) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- 3. GRADIENTES --- */
+        .gradient-section-primary {
+            background: linear-gradient(135deg, #1E2B4B 0%, #16203a 100%);
+            position: relative;
         }
         
-        /* Ajustes para Responsividade */
-        @media (max-width: 767px) {
-            /* Centraliza textos */
-            #inicio .text-content, #sobre .flex-col, #contato .md\:w-1\/2 { text-align: center; }
-            #inicio .content-wrapper { flex-direction: column-reverse; }
-            #inicio .text-content { padding-right: 0; align-items: center; display: flex; flex-direction: column; }
-            #sobre .flex-col.md\:flex-row { flex-direction: column; }
-            #contato ul, #contato .mt-8 { justify-content: center; display: flex; flex-direction: column; align-items: center; }
-            #contato li { justify-content: center; }
-            .hero-section-walter { height: auto; padding: 2rem 0; }
-            .hero-section-walter .image-content img { max-height: 300px; margin-bottom: 1.5rem; }
-            .image-scroll-container { margin-top: 2rem; }
+        .gradient-section-light {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+        }
+
+        .gradient-hero-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(240, 184, 0, 0.03) 0%, rgba(255, 255, 255, 0) 50%),
+                        linear-gradient(135deg, #ffffff 0%, #f0f4f9 100%);
+        }
+
+        /* --- 4. BOTÕES PREMIUM --- */
+        .btn-primary-premium {
+            background: linear-gradient(135deg, #F0B800 0%, #ffcc00 100%);
+            color: #1E2B4B;
+            font-weight: 800;
+            padding: 16px 36px;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 8px 25px rgba(240, 184, 0, 0.35);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        
+        .btn-primary-premium::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, #ffcc00 0%, #F0B800 100%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-primary-premium:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(240, 184, 0, 0.5);
+        }
+        
+        .btn-primary-premium:hover::after { opacity: 1; }
+        .btn-primary-premium i { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .btn-primary-premium:hover i { transform: scale(1.2) rotate(10deg); }
+
+        /* --- 5. CARDS DE SERVIÇOS (PROFUNDIDADE) --- */
+        .card-service-premium {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 4px 6px rgba(30, 43, 75, 0.02), 0 10px 15px rgba(30, 43, 75, 0.03);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-service-premium:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(30, 43, 75, 0.08);
+            border-color: rgba(240, 184, 0, 0.3);
+            background: white;
+        }
+        
+        .card-service-premium img { transition: transform 0.4s ease; }
+        .card-service-premium:hover img { transform: scale(1.1) rotate(-5deg); }
+
+        /* --- 6. CARDS DE AVALIAÇÕES --- */
+        .card-review-premium {
+            background: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 320px; /* Altura mínima para uniformidade */
+        }
+
+        .card-review-premium:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+            border-color: rgba(240, 184, 0, 0.2);
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            color: rgba(240, 184, 0, 0.1);
+            font-family: serif;
+            line-height: 0;
+        }
+
+        /* --- 7. ANIMAÇÕES (REMOVIDAS PARA LEVEZA) --- */
+        
+        /* --- 8. ELEMENTOS ESPECÍFICOS --- */
+        
+        /* Links Animados */
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            color: #f1f5f9;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 2px;
+            bottom: -4px; left: 0;
+            background: #F0B800;
+            transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .nav-link:hover { color: #F0B800; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 64px; height: 64px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6); }
+        
+        .notification-badge {
+            position: absolute; top: 0; right: 0;
+            background: #EF4444; color: white;
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            font-size: 12px; font-weight: bold;
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid white;
+            animation: pulse-red 2s infinite;
+        }
+        
+        @keyframes pulse-red {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+
+        /* Accordion FAQ */
+        .accordion-item {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(30, 43, 75, 0.05);
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .accordion-item:hover { border-color: rgba(240, 184, 0, 0.4); }
+        
+        .accordion-header { 
+            padding: 20px 24px;
+            cursor: pointer; 
+            font-weight: 600;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .accordion-content { 
+            max-height: 0; overflow: hidden; 
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+            background: #f8fafc;
+        }
+        .accordion-content.active { max-height: 300px; }
+        .accordion-content p { padding: 20px 24px; color: #475569; }
+        .accordion-icon { transition: transform 0.3s ease; color: #F0B800; }
+        .accordion-header.active .accordion-icon { transform: rotate(180deg); }
+
+        /* Carrosséis */
+        .image-scroll-container { 
+            overflow: hidden; position: relative; height: 400px; 
+            border-radius: 24px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+        }
+        .image-scroll-wrapper { 
+            display: flex; height: 100%; 
+            transition: transform 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955); 
+        }
+        .image-scroll-wrapper img { width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+
+        /* Utilities */
+        .mobile-menu { 
+            position: absolute; top: 100%; left: 0; right: 0; 
+            background: rgba(30, 43, 75, 0.98); 
+            backdrop-filter: blur(15px);
+            transform-origin: top; transform: scaleY(0); transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .mobile-menu.active { transform: scaleY(1); }
+        
+        /* Ajustes Mobile */
+        .carousel-container { overflow-x: auto; scroll-snap-type: x mandatory; display: flex; gap: 1rem; padding-bottom: 20px; }
+        .carousel-item { min-width: 85%; scroll-snap-align: center; }
+        
+        /* Input Styles */
+        .glass-input {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 12px 20px;
+            border-radius: 12px;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .glass-input:focus {
+            outline: none;
+            border-color: #F0B800;
+            box-shadow: 0 0 0 4px rgba(240, 184, 0, 0.1);
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="antialiased">
 
-    <!-- Botão flutuante do WhatsApp -->
-    <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" aria-label="WhatsApp Marcelo">
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas." 
+       class="whatsapp-float hover:animate-none" target="_blank" aria-label="Falar no WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="notification-badge">1</span>
     </a>
 
-    <!-- Cabeçalho -->
-    <header class="bg-primary-dark text-white shadow-lg sticky top-0 z-40">
-        <div class="container mx-auto flex items-center justify-between p-4 h-24 relative">
+    <!-- Header Glassmorphism -->
+    <header class="glass-dark fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto flex items-center justify-between p-4 lg:px-8 h-24">
             
-            <!-- Logo e Título para Desktop (Clicável) -->
-            <a href="#inicio" class="flex items-center space-x-4 relative z-10">
-                <img src="logo.avif" alt="Logo SOS Máquinas" class="h-16 w-16 rounded-full flex-shrink-0">
-                <div class="hidden md:block">
-                    <span class="text-2xl lg:text-3xl font-bold text-accent-yellow block">S.O.S MÁQUINAS</span>
-                    <span class="text-sm font-bold text-accent-yellow">De lavar roupas e Lava Seca</span>
+            <!-- Logo Area -->
+            <a href="#inicio" class="flex items-center space-x-4 group">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-yellow-400 blur opacity-20 rounded-full group-hover:opacity-40 transition duration-500"></div>
+                    <img src="logo.avif" alt="Logo SOS Máquinas" class="h-14 w-14 lg:h-16 lg:w-16 rounded-full relative z-10 border-2 border-white/10">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl lg:text-2xl font-bold text-white tracking-tight leading-none">
+                        S.O.S <span class="text-accent-yellow">MÁQUINAS</span>
+                    </span>
+                    <span class="text-xs lg:text-sm font-medium text-gray-300 tracking-wide mt-1">
+                        Especialistas em Lava e Seca
+                    </span>
                 </div>
             </a>
     
-            <!-- Título Centralizado para Mobile (Clicável) -->
-            <div class="md:hidden absolute inset-x-0 top-1/2 -translate-y-1/2 text-center">
-                <a href="#inicio">
-                    <span class="text-2xl font-bold text-accent-yellow block">S.O.S MÁQUINAS</span>
-                    <span class="text-base font-bold text-accent-yellow">De lavar roupas e Lava Seca</span>
-                </a>
-            </div>
-    
-            <!-- Navegação (Wrapper com z-index para garantir a clicabilidade) -->
-            <div class="relative z-10">
-                <nav class="hidden md:flex">
-                    <ul class="flex items-center space-x-6">
-                        <li><a href="#inicio">Inicial</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#avaliacoes">Avaliações</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </nav>
-                <div class="md:hidden">
-                    <button id="hamburger-icon" class="text-white text-2xl focus:outline-none w-8 flex justify-end">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center space-x-8 text-sm font-medium tracking-wide">
+                    <li><a href="#inicio" class="nav-link">Início</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                    <li>
+                        <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas." class="ml-4 px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white hover:bg-accent-yellow hover:text-primary-dark hover:border-accent-yellow transition-all duration-300 font-bold text-xs uppercase tracking-wider">
+                            <i class="fas fa-phone-alt mr-2"></i> (11) 97803-6428
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Toggle -->
+            <button id="hamburger-icon" class="md:hidden text-white text-2xl focus:outline-none w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
         
-        <!-- Menu Mobile Dropdown -->
-        <nav id="mobile-menu" class="mobile-menu">
-            <a href="#inicio" class="mobile-link">Inicial</a>
-            <a href="#servicos" class="mobile-link">Serviços</a>
-            <a href="#sobre" class="mobile-link">Sobre Nós</a>
-            <a href="#avaliacoes" class="mobile-link">Avaliações</a>
-            <a href="#contato" class="mobile-link">Contato</a>
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="mobile-menu md:hidden">
+            <div class="flex flex-col py-4">
+                <a href="#inicio" class="mobile-link block py-3 px-6 text-white hover:bg-white/5 hover:text-accent-yellow border-b border-white/5">Início</a>
+                <a href="#servicos" class="mobile-link block py-3 px-6 text-white hover:bg-white/5 hover:text-accent-yellow border-b border-white/5">Serviços</a>
+                <a href="#sobre" class="mobile-link block py-3 px-6 text-white hover:bg-white/5 hover:text-accent-yellow border-b border-white/5">Sobre Nós</a>
+                <a href="#avaliacoes" class="mobile-link block py-3 px-6 text-white hover:bg-white/5 hover:text-accent-yellow border-b border-white/5">Avaliações</a>
+                <a href="#contato" class="mobile-link block py-3 px-6 text-white hover:bg-white/5 hover:text-accent-yellow">Contato</a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <!-- Seção Principal (Hero) -->
-        <section id="inicio" class="hero-section-walter bg-white flex items-center justify-center pt-16">
-            <div class="container mx-auto px-4 content-wrapper flex items-center">
-                <div class="text-content md:w-1/2 md:text-left">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-primary-dark">Conserto de Máquina de Lavar e Lava e Seca em Bragança Paulista</h1>
-                    <p class="text-lg md:text-2xl mb-6 text-gray-700">Especialistas em Brastemp, Consul, Electrolux, LG e Samsung</p>
-                    <p class="text-base md:text-xl mb-8 text-gray-600">Sua lavadora parou? Oferecemos assistência técnica de confiança com atendimento rápido, eficiente e com garantia em toda Bragança Paulista.</p>
-                    <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento." class="inline-flex items-center justify-center bg-accent-yellow text-primary-dark font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition duration-300 shadow-lg">
-                        <i class="fab fa-whatsapp mr-2"></i>
-                        Fazer Orçamento
-                    </a>
-                </div>
-                <div class="image-content md:w-1/2 flex justify-center items-center">
-                    <img src="maquinas-banner.avif" alt="Técnico consertando máquina de lavar em Bragança Paulista" class="max-w-full h-auto object-contain">
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Nossos Serviços -->
-        <section id="servicos" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center text-primary-dark mb-12">Nossos Serviços em Bragança Paulista</h2>
-                <!-- Layout para Desktop -->
-                <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://img.icons8.com/dotty/80/1E2B4B/washing-machine.png" alt="Ícone Conserto Geral" class="w-20 h-20 mb-4">
-                        <h3 class="text-2xl font-semibold text-primary-dark mb-4">Conserto Geral</h3>
-                        <p class="text-gray-700 flex-grow">Reparo rápido para todos os modelos e marcas, garantindo o funcionamento perfeito da sua lavadora.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://img.icons8.com/dotty/80/1E2B4B/maintenance.png" alt="Ícone Manutenção Preventiva" class="w-20 h-20 mb-4">
-                        <h3 class="text-2xl font-semibold text-primary-dark mb-4">Manutenção Preventiva</h3>
-                        <p class="text-gray-700 flex-grow">Evite problemas com a manutenção regular, prolongando a vida útil e eficiência da sua máquina.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://img.icons8.com/dotty/80/1E2B4B/services.png" alt="Ícone Instalação de Máquina de Lavar" class="w-20 h-20 mb-4">
-                        <h3 class="text-2xl font-semibold text-primary-dark mb-4">Instalação</h3>
-                        <p class="text-gray-700 flex-grow">Instalamos sua nova máquina de lavar com segurança, seguindo as especificações do fabricante.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://img.icons8.com/dotty/80/1E2B4B/settings.png" alt="Ícone Troca de Peças" class="w-20 h-20 mb-4">
-                        <h3 class="text-2xl font-semibold text-primary-dark mb-4">Troca de Peças</h3>
-                        <p class="text-gray-700 flex-grow">Substituição de peças por componentes de alta qualidade, com garantia de durabilidade.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://img.icons8.com/ios/80/1E2B4B/washing.png" alt="Ícone de Lavagem" class="w-20 h-20 mb-4">
-                        <h3 class="text-2xl font-semibold text-primary-dark mb-4">Lavagem de Edredons e Cobertores</h3>
-                        <p class="text-gray-700 flex-grow">Serviço especializado para limpeza pesada de edredons e cobertores.</p>
-                    </div>
-                </div>
-                <!-- Carrossel para Mobile -->
-                <div class="md:hidden carousel-container">
-                    <div class="carousel-wrapper">
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                            <img src="https://img.icons8.com/dotty/80/1E2B4B/washing-machine.png" alt="Ícone Conserto Geral" class="w-20 h-20 mb-4">
-                            <h3 class="text-2xl font-semibold text-primary-dark mb-4">Conserto Geral</h3>
-                            <p class="text-gray-700 flex-grow">Reparo rápido para todos os modelos e marcas.</p>
+        <!-- Hero Section -->
+        <section id="inicio" class="relative pt-32 lg:pt-40 pb-20 lg:pb-32 gradient-hero-bg overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50/50 to-transparent pointer-events-none"></div>
+            
+            <div class="container mx-auto px-4 lg:px-8 relative z-10">
+                <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+                    
+                    <!-- Text Content -->
+                    <div class="lg:w-1/2 text-center lg:text-left">
+                        <div class="inline-block px-4 py-1.5 rounded-full bg-blue-100/50 text-primary-dark font-bold text-xs uppercase tracking-wider mb-6 border border-blue-200">
+                            Atendimento em Bragança Paulista
                         </div>
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                            <img src="https://img.icons8.com/dotty/80/1E2B4B/maintenance.png" alt="Ícone Manutenção Preventiva" class="w-20 h-20 mb-4">
-                            <h3 class="text-2xl font-semibold text-primary-dark mb-4">Manutenção Preventiva</h3>
-                            <p class="text-gray-700 flex-grow">Evite problemas com a manutenção regular.</p>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-dark mb-6 leading-tight">
+                            Sua máquina parou? <br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-900">Nós resolvemos.</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+                            Assistência técnica especializada em <strong>Brastemp, Consul, Electrolux, LG e Samsung</strong>. Rapidez, honestidade e garantia no serviço.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas." class="btn-primary-premium w-full sm:w-auto">
+                                <i class="fab fa-whatsapp text-xl mr-3"></i>
+                                Fazer Orçamento Grátis
+                            </a>
+                            <a href="#servicos" class="px-8 py-4 rounded-full text-primary-dark font-bold hover:bg-gray-100 transition duration-300 w-full sm:w-auto border border-gray-200 bg-white/50 backdrop-blur-sm">
+                                Ver Serviços
+                            </a>
                         </div>
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                            <img src="https://img.icons8.com/dotty/80/1E2B4B/services.png" alt="Ícone Instalação de Máquina de Lavar" class="w-20 h-20 mb-4">
-                            <h3 class="text-2xl font-semibold text-primary-dark mb-4">Instalação</h3>
-                            <p class="text-gray-700 flex-grow">Instalamos sua nova máquina de lavar com segurança.</p>
-                        </div>
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                            <img src="https://img.icons8.com/dotty/80/1E2B4B/settings.png" alt="Ícone Troca de Peças" class="w-20 h-20 mb-4">
-                            <h3 class="text-2xl font-semibold text-primary-dark mb-4">Troca de Peças</h3>
-                            <p class="text-gray-700 flex-grow">Substituição de peças por componentes de alta qualidade.</p>
-                        </div>
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                            <img src="https://img.icons8.com/ios/80/1E2B4B/washing.png" alt="Ícone de Lavagem" class="w-20 h-20 mb-4">
-                            <h3 class="text-2xl font-semibold text-primary-dark mb-4">Lavagem de Edredons e Cobertores</h3>
-                            <p class="text-gray-700 flex-grow">Serviço especializado para limpeza pesada de edredons e cobertores.</p>
+                        
+                        <!-- Trust Indicators -->
+                        <div class="mt-10 flex items-center justify-center lg:justify-start space-x-6 text-gray-500 text-sm font-medium">
+                            <div class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Garantia Total</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Peças Originais</div>
                         </div>
                     </div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento." class="inline-flex items-center justify-center bg-accent-yellow text-primary-dark font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition duration-300 shadow-lg">
-                        <i class="fab fa-whatsapp mr-2"></i>
-                        Fazer Orçamento
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Sobre a SOS Máquinas -->
-        <section id="sobre" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center text-primary-dark mb-12">Sobre a SOS Máquinas</h2>
-                <div class="flex flex-col md:flex-row items-center md:space-x-12">
-                    <div class="md:w-1/2">
-                        <p class="text-lg leading-relaxed mb-6">Com anos de experiência, a SOS Máquinas é sua parceira ideal para conserto e manutenção de máquinas de lavar em Bragança Paulista. Nosso compromisso é com a qualidade, agilidade e a satisfação total dos clientes.</p>
-                        <p class="text-lg leading-relaxed mb-6">Entendemos a importância da sua máquina de lavar. Por isso, oferecemos um serviço especializado e conveniente em domicílio, garantindo o mínimo de transtorno para sua rotina.</p>
-                        <p class="text-lg leading-relaxed mb-6">Caso o reparo não possa ser feito no local, nosso técnico responsável, Marcelo, se encarrega de levar a máquina para nossa oficina e devolvê-la funcionando perfeitamente.</p>
-                        <p class="text-lg leading-relaxed">Trabalhamos com as principais marcas, utilizando peças de alta qualidade e oferecendo garantia em todos os serviços. Confie na SOS Máquinas para ter sua lavadora como nova!</p>
-                    </div>
-                    <div class="md:w-1/2 w-full image-scroll-container">
-                        <div class="image-scroll-wrapper" id="about-images">
-                            <img src="carro.avif" alt="Carro de Serviço da SOS Máquinas em Bragança Paulista">
-                            <img src="m1.avif" alt="Conserto de Máquina de Lavar Brastemp">
-                            <img src="m2.avif" alt="Conserto de Máquina de Lavar Consul">
-                            <img src="m3.avif" alt="Conserto de Máquina de Lavar Electrolux">
-                            <img src="m4.avif" alt="Conserto de Máquina de Lavar LG">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Seção de Avaliações -->
-        <section id="avaliacoes" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center text-primary-dark mb-12">O que nossos clientes dizem</h2>
-                
-                <!-- Sumário Google -->
-                <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto text-center mb-12">
-                    <img width="48" height="48" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" class="mx-auto mb-2"/>
-                    <h3 class="text-2xl font-semibold text-primary-dark">Somos 5 estrelas no Google</h3>
-                    <div class="flex items-center justify-center my-2">
-                        <span class="text-3xl font-bold text-gray-800 mr-2">5.0</span>
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">Baseado em 164 avaliações</p>
-                    <a href="https://www.google.com/search?q=S.O.S+M%C3%A1quinas+%7C+Conserto+de+M%C3%A1quinas+Lavar+Roupas+e+Lava+Seca+Coment%C3%A1rios" target="_blank" class="mt-4 inline-block bg-blue-500 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">
-                        Veja todas as avaliações
-                    </a>
-                </div>
-
-                <!-- Carrossel de Avaliações para Mobile -->
-                <div class="md:hidden carousel-container">
-                    <div class="carousel-wrapper">
-                        <!-- Avaliação 1 -->
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Andressa Souza</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"Marcelo fez um ótimo trabalho, explicou um problema que máquina está... Eu irei indicar ele pra família e amigos com certeza, obrigado pelo seu trabalho!"</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                        <!-- Avaliação 2 -->
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Amauri Oliveira De Souza</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"O técnico Marcelo tem um vasto conhecimento profissional. Efetuou o serviço rapidamente e o preço cobrado foi justo e possivelmente o melhor da região. Recomendo! 👍👍👍"</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                        <!-- Avaliação 3 -->
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">MILTON PASSOS TEIXEIRA</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"O profissional Marcelo, atendeu muito bem, foi atencioso e eficiente em seu diagnóstico e preço justo. Recomendo tranquilamente seus services."</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                         <!-- Avaliação 4 -->
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Erica Geraldis</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"Excelente profissional, iniciou o atendimento no horário combinado, lavou o tambor da máquina... deixou o ambiente limpo e seco, não riscou a máquina..."</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                        <!-- Avaliação 5 -->
-                        <div class="carousel-item bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Jason Mota</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"Profissional competente, atende super rapido, e ainda é honesto nos valores que cobra. Super indico sem medo de errar."</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Grid de Avaliações para Desktop -->
-                <div class="hidden md:grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                        <!-- Avaliação 1 -->
-                       <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Andressa Souza</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"Marcelo fez um ótimo trabalho, explicou um problema que máquina está, não irei arrumar pq pretendo comprar outra, da pra usar por enquanto. Eu irei indicar ele pra família e amigos com certeza, obrigado pelo seu trabalho!"</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                        <!-- Avaliação 2 -->
-                        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Amauri Oliveira De Souza</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"O técnico Marcelo tem um vasto conhecimento profissional. Efetuou o serviço rapidamente e o preço cobrado foi justo e possivelmente o melhor da região. Recomendo! 👍👍👍"</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                        <!-- Avaliação 3 -->
-                        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">MILTON PASSOS TEIXEIRA</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"O profissional Marcelo, atendeu muito bem, foi atencioso e eficiente em seu diagnóstico e preço justo. Recomendo tranquilamente seus services."</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                        <!-- Avaliação 4 -->
-                        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Erica Geraldis</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"Excelente profissional, iniciou o atendimento no horário combinado, lavou o tambor da máquina de lavar com Wap, logo depois deixou o ambiente limpo e seco, não riscou a máquina, trocou o kit mecanismo com as ferramentas corretas."</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                        <!-- Avaliação 5 -->
-                        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Jason Mota</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"Profissional competente, atende super rapido, e ainda é honesto nos valores que cobra. Super indico sem medo de errar."</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                        <!-- Avaliação 6 (Placeholder) -->
-                       <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                            <h4 class="text-xl font-bold text-primary-dark">Cliente Satisfeito</h4>
-                            <div class="flex text-yellow-400 my-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="text-gray-700 flex-grow">"Serviço de alta qualidade, rápido e com preço justo. Recomendo a todos de Bragança e região que precisam de um técnico de confiança."</p>
-                            <span class="text-gray-500 text-sm mt-4">Fonte: Google</span>
-                        </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Perguntas Frequentes (FAQ) -->
-        <section id="faq" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center text-primary-dark mb-12">Perguntas Frequentes</h2>
-                <div class="max-w-3xl mx-auto">
-                    <div class="mb-4 bg-gray-50 rounded-lg shadow">
-                        <div class="accordion-header p-4 flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-primary-dark">Quais marcas vocês consertam?</h3>
-                            <i class="fas fa-chevron-down text-primary-dark"></i>
-                        </div>
-                        <div class="accordion-content bg-gray-50 rounded-b-lg">
-                            <p class="text-gray-700 p-4 pt-0">Somos especialistas nas principais marcas do mercado, incluindo Brastemp, Consul, Electrolux, LG e Samsung.</p>
-                        </div>
-                    </div>
-                    <div class="mb-4 bg-gray-50 rounded-lg shadow">
-                        <div class="accordion-header p-4 flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-primary-dark">Vocês atendem em domicílio?</h3>
-                            <i class="fas fa-chevron-down text-primary-dark"></i>
-                        </div>
-                        <div class="accordion-content bg-gray-50 rounded-b-lg">
-                            <p class="text-gray-700 p-4 pt-0">Sim, nosso serviço é em domicílio para sua comodidade em toda Bragança Paulista. Se necessário, levamos a máquina para a oficina e a devolvemos pronta.</p>
-                        </div>
-                    </div>
-                    <div class="mb-4 bg-gray-50 rounded-lg shadow">
-                        <div class="accordion-header p-4 flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-primary-dark">Qual a garantia do serviço?</h3>
-                            <i class="fas fa-chevron-down text-primary-dark"></i>
-                        </div>
-                        <div class="accordion-content bg-gray-50 rounded-b-lg">
-                            <p class="text-gray-700 p-4 pt-0">Oferecemos garantia em todos os serviços e peças. O tempo exato da garantia será informado no seu orçamento.</p>
-                        </div>
-                    </div>
-                    <div class="mb-4 bg-gray-50 rounded-lg shadow">
-                        <div class="accordion-header p-4 flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-primary-dark">Como agendar um conserto?</h3>
-                            <i class="fas fa-chevron-down text-primary-dark"></i>
-                        </div>
-                        <div class="accordion-content bg-gray-50 rounded-b-lg">
-                            <p class="text-gray-700 p-4 pt-0">É simples! Basta nos chamar no WhatsApp pelo botão "Fazer Orçamento" em nosso site ou pelo número (11) 97803-6428.</p>
+                    
+                    <!-- Image Content -->
+                    <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-yellow-400/20 rounded-full blur-3xl transform scale-90"></div>
+                            <img src="maquinas-banner.avif" alt="Técnico SOS Máquinas" class="relative z-10 max-h-[400px] lg:max-h-[550px] object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Contato e Mapa -->
-        <section id="contato" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center text-primary-dark mb-12">Fale Conosco</h2>
-                <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-12">
-                    <div class="md:w-1/2 mb-8 md:mb-0">
-                        <p class="text-lg leading-relaxed mb-6">Entre em contato com o Marcelo para agendar seu serviço ou tirar dúvidas. Estamos prontos para atendê-lo em Bragança Paulista!</p>
-                        <ul class="text-lg space-y-4">
-                            <li class="flex items-center">
-                                <i class="fab fa-whatsapp text-2xl text-green-500 mr-3"></i>
-                                <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas." target="_blank" class="hover:text-accent-yellow transition duration-300">(11) 97803-6428 (Marcelo)</a>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fab fa-instagram text-2xl text-pink-500 mr-3"></i>
-                                <a href="https://www.instagram.com/sosmaquinasbraganca/" target="_blank" class="hover:text-accent-yellow transition duration-300">@sosmaquinasbraganca</a>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-map-marker-alt text-2xl text-red-500 mr-3"></i>
-                                <span>R. Jundiaí, 251 - Vila Mun., Bragança Paulista - SP</span>
-                            </li>
-                        </ul>
-                        <div class="mt-8">
-                            <a href="https://g.co/kgs/utHA8Qj" target="_blank" class="text-primary-dark hover:text-accent-yellow transition duration-300 flex items-center">
-                                <i class="fab fa-google text-2xl mr-2"></i>
+        <!-- Services Section -->
+        <section id="servicos" class="py-24 gradient-section-light">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-primary-dark mb-4">Nossos Serviços Especializados</h2>
+                    <div class="h-1 w-24 bg-accent-yellow mx-auto rounded-full"></div>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Soluções completas para manter sua lavadora funcionando como nova.</p>
+                </div>
+
+                <!-- Desktop Grid -->
+                <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div>
+                        <div class="card-service-premium group">
+                            <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-yellow/10 transition-colors">
+                                <img src="https://img.icons8.com/dotty/80/1E2B4B/washing-machine.png" alt="Conserto" class="w-12 h-12">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-3">Conserto Geral</h3>
+                            <p class="text-center text-gray-600 text-sm leading-relaxed">Diagnóstico preciso e reparo rápido para qualquer defeito. Sua máquina volta a lavar perfeitamente.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div>
+                        <div class="card-service-premium group">
+                            <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-yellow/10 transition-colors">
+                                <img src="https://img.icons8.com/dotty/80/1E2B4B/maintenance.png" alt="Manutenção" class="w-12 h-12">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-3">Manutenção Preventiva</h3>
+                            <p class="text-center text-gray-600 text-sm leading-relaxed">Higienização técnica e lubrificação que evitam quebras futuras e mau cheiro nas roupas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div>
+                        <div class="card-service-premium group">
+                            <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-yellow/10 transition-colors">
+                                <img src="https://img.icons8.com/dotty/80/1E2B4B/services.png" alt="Instalação" class="w-12 h-12">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-3">Instalação</h3>
+                            <p class="text-center text-gray-600 text-sm leading-relaxed">Instalação correta de lavadoras e lava e seca, garantindo nivelamento e conexões seguras.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div>
+                        <div class="card-service-premium group">
+                            <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-yellow/10 transition-colors">
+                                <img src="https://img.icons8.com/dotty/80/1E2B4B/settings.png" alt="Peças" class="w-12 h-12">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-3">Troca de Peças</h3>
+                            <p class="text-center text-gray-600 text-sm leading-relaxed">Utilizamos apenas componentes de alta durabilidade compatíveis com as especificações da fábrica.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div>
+                        <div class="card-service-premium group">
+                            <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-yellow/10 transition-colors">
+                                <img src="https://img.icons8.com/ios/80/1E2B4B/washing.png" alt="Edredons" class="w-12 h-12">
+                            </div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-3">Limpeza de Edredons</h3>
+                            <p class="text-center text-gray-600 text-sm leading-relaxed">Serviço profissional para lavagem de itens pesados que sua máquina doméstica pode não suportar.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Box -->
+                    <div>
+                        <div class="h-full rounded-3xl bg-primary-dark p-8 flex flex-col items-center justify-center text-center relative overflow-hidden shadow-xl">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-transparent opacity-50"></div>
+                            <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Precisa de Ajuda Agora?</h3>
+                            <p class="text-blue-100 mb-8 relative z-10 text-sm">Nosso técnico está pronto para atender você.</p>
+                            <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas." class="btn-primary-premium w-full relative z-10">
+                                <i class="fab fa-whatsapp mr-2"></i> Chamar Técnico
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Carousel (Simplificado) -->
+                <div class="md:hidden carousel-container py-4">
+                    <!-- Itens repetidos para mobile com a classe card-service-premium -->
+                    <div class="carousel-item">
+                        <div class="card-service-premium h-full">
+                            <img src="https://img.icons8.com/dotty/80/1E2B4B/washing-machine.png" alt="Conserto" class="w-16 h-16 mb-4">
+                            <h3 class="text-lg font-bold text-primary-dark mb-2">Conserto Geral</h3>
+                            <p class="text-center text-gray-600 text-sm">Reparo rápido para todos os modelos.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-service-premium h-full">
+                            <img src="https://img.icons8.com/dotty/80/1E2B4B/maintenance.png" alt="Manutenção" class="w-16 h-16 mb-4">
+                            <h3 class="text-lg font-bold text-primary-dark mb-2">Manutenção</h3>
+                            <p class="text-center text-gray-600 text-sm">Evite problemas futuros.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-service-premium h-full">
+                            <img src="https://img.icons8.com/dotty/80/1E2B4B/services.png" alt="Instalação" class="w-16 h-16 mb-4">
+                            <h3 class="text-lg font-bold text-primary-dark mb-2">Instalação</h3>
+                            <p class="text-center text-gray-600 text-sm">Segurança na instalação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="py-24 bg-white relative overflow-hidden">
+            <!-- Background Shape -->
+            <div class="absolute -left-20 top-1/2 w-64 h-64 bg-accent-yellow/5 rounded-full blur-3xl"></div>
+            
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <span class="text-accent-yellow font-bold text-sm uppercase tracking-widest mb-2 block">Quem Somos</span>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-primary-dark mb-6">Excelência em cada detalhe do atendimento</h2>
+                        
+                        <div class="space-y-6 text-gray-600 text-lg">
+                            <p>A <strong>SOS Máquinas</strong> nasceu com um propósito claro: oferecer um serviço técnico honesto, transparente e de altíssima qualidade para Bragança Paulista.</p>
+                            <p>Sabemos o transtorno que uma máquina quebrada causa na rotina. Por isso, nosso atendimento é focado na agilidade. Nosso técnico responsável, <strong>Marcelo</strong>, possui vasta experiência e certificações nas principais marcas do mercado.</p>
+                            <div class="p-6 bg-blue-50 rounded-2xl border-l-4 border-accent-yellow">
+                                <p class="text-primary-dark font-medium italic">"Nosso diferencial é o atendimento em domicílio com a mesma estrutura de uma oficina, garantindo conforto e transparência para o cliente."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 w-full">
+                        <div class="image-scroll-container">
+                            <div class="image-scroll-wrapper" id="about-images">
+                                <img src="carro.avif" alt="Carro SOS Máquinas">
+                                <img src="m1.avif" alt="Conserto Brastemp">
+                                <img src="m2.avif" alt="Conserto Consul">
+                                <img src="m3.avif" alt="Conserto Electrolux">
+                                <img src="m4.avif" alt="Conserto LG">
+                            </div>
+                            <!-- Overlay Gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-6 left-6 text-white pointer-events-none">
+                                <p class="font-bold text-xl">Atendimento Móvel</p>
+                                <p class="text-sm opacity-80">Vamos até sua residência</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section with Carousel -->
+        <section id="avaliacoes" class="py-24 bg-gray-50 relative group">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-primary-dark mb-4">O que nossos clientes dizem</h2>
+                    <div class="h-1 w-24 bg-accent-yellow mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Container Flex para Layout Lado a Lado -->
+                <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8">
+                    
+                    <!-- Google Badge Premium (Lado Esquerdo em telas grandes) -->
+                    <div class="w-full lg:w-1/3 flex-shrink-0 hidden lg:block">
+                        <div class="glass h-full p-8 text-center shadow-lg relative overflow-hidden flex flex-col justify-center items-center">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-red-500 to-yellow-500"></div>
+                            <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" class="mb-3 w-12">
+                            <h3 class="text-3xl font-bold text-gray-800 mb-2">5.0 Estrelas</h3>
+                            <div class="flex justify-center gap-1 text-yellow-400 text-2xl mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-500 font-medium mb-8">Baseado em +160 avaliações reais</p>
+                            <a href="https://www.google.com/search?q=S.O.S+M%C3%A1quinas" target="_blank" class="inline-block px-10 py-4 rounded-full bg-white border border-gray-200 text-blue-600 font-bold hover:bg-blue-50 transition shadow-sm w-full">
                                 Ver no Google
                             </a>
                         </div>
                     </div>
-                    <div class="md:w-1/2 w-full h-64 md:h-96 rounded-lg shadow-md overflow-hidden">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.529809950796!2d-46.54148422485542!3d-22.87994847926189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceb70954930361%3A0x6b6d5b0a3c2e1f40!2sR.%20Jundia%C3%AD%2C%20251%20-%20Vila%20Mun.%2C%20Bragan%C3%A7a%20Paulista%20-%20SP%2C%2012912-380!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+
+                    <!-- Carousel Controls & Track (Lado Direito) -->
+                    <div class="w-full lg:w-2/3 relative flex flex-col justify-center">
+                        <div class="relative w-full flex items-center">
+                            <!-- Button Prev -->
+                            <button id="prev-review" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-20 w-12 h-12 rounded-full bg-white shadow-xl border border-gray-100 text-primary-dark flex items-center justify-center hover:bg-accent-yellow transition duration-300 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 hidden md:flex">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+
+                            <!-- Reviews Carousel Track -->
+                            <div id="reviews-track" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar px-2 w-full">
+                                
+                                <!-- Google Badge (Mobile Only) -->
+                                <div class="min-w-[100%] md:min-w-[48%] snap-center lg:hidden">
+                                    <div class="glass h-full p-8 text-center shadow-lg relative overflow-hidden flex flex-col justify-center items-center">
+                                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-red-500 to-yellow-500"></div>
+                                        <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" class="mb-3 w-12">
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-2">5.0 Estrelas</h3>
+                                        <div class="flex justify-center gap-1 text-yellow-400 text-2xl mb-4">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="text-gray-500 font-medium mb-8">Baseado em +160 avaliações reais</p>
+                                        <a href="https://www.google.com/search?q=S.O.S+M%C3%A1quinas" target="_blank" class="inline-block px-10 py-4 rounded-full bg-white border border-gray-200 text-blue-600 font-bold hover:bg-blue-50 transition shadow-sm w-full">
+                                            Ver no Google
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Review 1 -->
+                                <div class="min-w-[100%] md:min-w-[48%] snap-center">
+                                    <div class="card-review-premium h-full">
+                                        <span class="quote-icon">“</span>
+                                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="text-gray-600 italic mb-6 flex-grow relative z-10">"Marcelo fez um ótimo trabalho, explicou o problema da máquina... Eu irei indicar ele pra família e amigos com certeza!"</p>
+                                        <div class="flex items-center gap-3 border-t pt-4 border-gray-100 mt-auto">
+                                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 font-bold">AS</div>
+                                            <div>
+                                                <h4 class="font-bold text-sm text-primary-dark">Andressa Souza</h4>
+                                                <span class="text-xs text-gray-400">Via Google Reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Review 2 -->
+                                <div class="min-w-[100%] md:min-w-[48%] snap-center">
+                                    <div class="card-review-premium h-full">
+                                        <span class="quote-icon">“</span>
+                                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="text-gray-600 italic mb-6 flex-grow relative z-10">"O técnico Marcelo tem um vasto conhecimento profissional. Efetuou o serviço rapidamente e o preço foi justo. Recomendo!"</p>
+                                        <div class="flex items-center gap-3 border-t pt-4 border-gray-100 mt-auto">
+                                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-800 font-bold">AO</div>
+                                            <div>
+                                                <h4 class="font-bold text-sm text-primary-dark">Amauri Oliveira</h4>
+                                                <span class="text-xs text-gray-400">Via Google Reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Review 3 -->
+                                <div class="min-w-[100%] md:min-w-[48%] snap-center">
+                                    <div class="card-review-premium h-full">
+                                        <span class="quote-icon">“</span>
+                                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="text-gray-600 italic mb-6 flex-grow relative z-10">"Atendeu muito bem, foi atencioso e eficiente em seu diagnóstico. Deixou o local limpo e organizado. Nota 10!"</p>
+                                        <div class="flex items-center gap-3 border-t pt-4 border-gray-100 mt-auto">
+                                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 font-bold">EG</div>
+                                            <div>
+                                                <h4 class="font-bold text-sm text-primary-dark">Erica Geraldis</h4>
+                                                <span class="text-xs text-gray-400">Via Google Reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Review 4 -->
+                                <div class="min-w-[100%] md:min-w-[48%] snap-center">
+                                    <div class="card-review-premium h-full">
+                                        <span class="quote-icon">“</span>
+                                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="text-gray-600 italic mb-6 flex-grow relative z-10">"O profissional Marcelo, atendeu muito bem, foi atencioso e eficiente em seu diagnóstico e preço justo. Recomendo tranquilamente."</p>
+                                        <div class="flex items-center gap-3 border-t pt-4 border-gray-100 mt-auto">
+                                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-800 font-bold">MP</div>
+                                            <div>
+                                                <h4 class="font-bold text-sm text-primary-dark">Milton Passos</h4>
+                                                <span class="text-xs text-gray-400">Via Google Reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Review 5 -->
+                                <div class="min-w-[100%] md:min-w-[48%] snap-center">
+                                    <div class="card-review-premium h-full">
+                                        <span class="quote-icon">“</span>
+                                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="text-gray-600 italic mb-6 flex-grow relative z-10">"Profissional competente, atende super rapido, e ainda é honesto nos valores que cobra. Super indico sem medo de errar."</p>
+                                        <div class="flex items-center gap-3 border-t pt-4 border-gray-100 mt-auto">
+                                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-800 font-bold">JM</div>
+                                            <div>
+                                                <h4 class="font-bold text-sm text-primary-dark">Jason Mota</h4>
+                                                <span class="text-xs text-gray-400">Via Google Reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Button Next -->
+                            <button id="next-review" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-20 w-12 h-12 rounded-full bg-white shadow-xl border border-gray-100 text-primary-dark flex items-center justify-center hover:bg-accent-yellow transition duration-300 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 hidden md:flex">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Scroll Progress Bar -->
+                        <div class="relative mt-6 w-full max-w-xs mx-auto">
+                            <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                <div id="scroll-progress" class="h-full bg-primary-dark rounded-full w-0 transition-all duration-100 ease-out"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/3">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-primary-dark mb-4">Dúvidas Comuns</h2>
+                        <p class="text-gray-600 mb-8">Separamos as perguntas mais frequentes para te ajudar.</p>
+                        <img src="https://img.icons8.com/clouds/200/question-mark.png" alt="FAQ Icon" class="hidden md:block opacity-80">
+                    </div>
+                    
+                    <div class="md:w-2/3 space-y-4">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span class="text-primary-dark">Quais marcas vocês consertam?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Somos especialistas credenciados em <strong>Brastemp, Consul, Electrolux, LG e Samsung</strong>. Possuímos ferramentas específicas e acesso a manuais técnicos de fábrica para estas marcas.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span class="text-primary-dark">Vocês atendem em domicílio?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Sim! 90% dos reparos são realizados na sua casa, na sua frente. Levamos todas as ferramentas necessárias. Apenas em casos complexos retiramos a máquina para nossa oficina.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span class="text-primary-dark">O serviço tem garantia?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Com certeza. Oferecemos garantia legal de 90 dias para mão de obra e peças, podendo se estender dependendo do componente trocado. Tudo documentado.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span class="text-primary-dark">Cobram visita?</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Entre em contato pelo WhatsApp para verificarmos sua localização em Bragança Paulista e passarmos as condições de orçamento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-24 gradient-section-primary text-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    
+                    <div class="lg:w-1/2">
+                        <span class="text-accent-yellow font-bold text-sm tracking-widest uppercase mb-2 block">Contato</span>
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-6">Fale com a SOS Máquinas</h2>
+                        <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                            O Marcelo está aguardando seu contato para resolver o problema da sua lavadora. Atendimento rápido e cordial.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <a href="https://wa.me/5511978036428?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20do%20site%20SOS%20M%C3%A1quinas." class="flex items-center p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition border border-white/5 group">
+                                <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white text-xl mr-4 shadow-lg group-hover:scale-110 transition-transform">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase font-bold">WhatsApp (Marcelo)</p>
+                                    <p class="text-xl font-bold text-white">(11) 97803-6428</p>
+                                </div>
+                            </a>
+
+                            <a href="https://www.google.com/maps/search/?api=1&query=R.+Jundia%C3%AD,+251+-+Vila+Mun.,+Bragança+Paulista+-+SP" target="_blank" class="flex items-center p-4 bg-white/10 rounded-2xl border border-white/5 hover:bg-white/20 transition group">
+                                <div class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center text-white text-xl mr-4 shadow-lg group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase font-bold">Localização</p>
+                                    <p class="text-base font-medium text-white">R. Jundiaí, 251 - Vila Mun., Bragança Paulista - SP</p>
+                                </div>
+                            </a>
+
+                            <a href="https://www.instagram.com/sosmaquinasbraganca/" target="_blank" class="flex items-center p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition border border-white/5 group">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 flex items-center justify-center text-white text-xl mr-4 shadow-lg group-hover:scale-110 transition-transform">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase font-bold">Siga no Instagram</p>
+                                    <p class="text-lg font-bold text-white">@sosmaquinasbraganca</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2">
+                        <div class="bg-white/10 p-2 rounded-3xl backdrop-blur-sm border border-white/10 h-[400px] lg:h-[500px]">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.529809950796!2d-46.54148422485542!3d-22.87994847926189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceb70954930361%3A0x6b6d5b0a3c2e1f40!2sR.%20Jundia%C3%AD%2C%20251%20-%20Vila%20Mun.%2C%20Bragan%C3%A7a%20Paulista%20-%20SP%2C%2012912-380!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
+                                class="w-full h-full rounded-2xl grayscale hover:grayscale-0 transition-all duration-500" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="bg-primary-dark text-white py-8">
+    <footer class="bg-[#16203a] text-white py-12 border-t border-white/5">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">© 2024 SOS Máquinas. Todos os direitos reservados.</p>
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <img src="logo.avif" alt="Logo" class="w-10 h-10 rounded-full grayscale opacity-70">
+                <span class="font-bold text-xl text-white/80">SOS MÁQUINAS</span>
+            </div>
+            <p class="text-gray-500 text-sm mb-6">© 2024 SOS Máquinas. Qualidade e confiança em Bragança Paulista.</p>
+            <div class="flex justify-center space-x-6 text-2xl text-gray-500">
+                <a href="#" class="hover:text-accent-yellow transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-accent-yellow transition"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Menu Mobile
+            
+            // 1. Mobile Menu Logic
             const hamburger = document.getElementById('hamburger-icon');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileLinks = document.querySelectorAll('.mobile-link');
-            const toggleMenu = () => mobileMenu.classList.toggle('active');
+            
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('active');
+                const icon = hamburger.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            };
+            
             hamburger.addEventListener('click', toggleMenu);
             mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
-            // Acordeão FAQ
+            // 2. Accordion Logic
             const accordionHeaders = document.querySelectorAll('.accordion-header');
             accordionHeaders.forEach(header => {
                 header.addEventListener('click', () => {
-                    const wasActive = header.classList.contains('active');
-                    accordionHeaders.forEach(h => {
+                    const content = header.nextElementSibling;
+                    const isActive = header.classList.contains('active');
+                    
+                    // Close others
+                    document.querySelectorAll('.accordion-header').forEach(h => {
                         h.classList.remove('active');
                         h.nextElementSibling.classList.remove('active');
                     });
-                    if (!wasActive) {
+
+                    if (!isActive) {
                         header.classList.add('active');
-                        header.nextElementSibling.classList.add('active');
+                        content.classList.add('active');
                     }
                 });
             });
 
-            // Carrossel de Imagens (Sobre Nós)
+            // 3. Image Carousel Auto-Scroll (About Section)
             const imageWrapper = document.getElementById('about-images');
             if (imageWrapper) {
                 let currentIndex = 0;
                 setInterval(() => {
                     currentIndex = (currentIndex + 1) % imageWrapper.children.length;
                     imageWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-                }, 3000);
+                }, 3500);
             }
+
+            // 4. Reviews Carousel Logic (Manual Navigation & Progress Bar)
+            const reviewsTrack = document.getElementById('reviews-track');
+            const prevReviewBtn = document.getElementById('prev-review');
+            const nextReviewBtn = document.getElementById('next-review');
+            const scrollProgress = document.getElementById('scroll-progress');
+
+            const updateScrollProgress = () => {
+                if (!reviewsTrack || !scrollProgress) return;
+                const scrollWidth = reviewsTrack.scrollWidth - reviewsTrack.clientWidth;
+                const scrolled = reviewsTrack.scrollLeft;
+                const progress = (scrolled / scrollWidth) * 100;
+                scrollProgress.style.width = `${progress}%`;
+            };
+
+            if (reviewsTrack) {
+                reviewsTrack.addEventListener('scroll', updateScrollProgress);
+                // Initial call to set width if starting position is not 0
+                updateScrollProgress();
+                
+                if (prevReviewBtn && nextReviewBtn) {
+                    prevReviewBtn.addEventListener('click', () => {
+                        reviewsTrack.scrollBy({ left: -300, behavior: 'smooth' });
+                    });
+                    nextReviewBtn.addEventListener('click', () => {
+                        reviewsTrack.scrollBy({ left: 300, behavior: 'smooth' });
+                    });
+                }
+            }
+
+            // Removido: Intersection Observer de Animações
         });
     </script>
 </body>
