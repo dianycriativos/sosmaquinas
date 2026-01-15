@@ -6,15 +6,16 @@ Disallow: /tmp/
 
 Sitemap
 
-Sitemap: https://www.google.com/search?q=https://sosmaquinasdelavarroupa.com.br/sitemap.xml
+Sitemap: https://sosmaquinasdelavarroupa.com.br/sitemap.xml
 
-Permitir rastreamento rápido do Google
+Configurações específicas para o Googlebot
 
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
-Permitir rastreamento do Bing
+Nota: O Google ignora a diretiva Crawl-delay.
+
+Configurações específicas para o Bingbot
 
 User-agent: Bingbot
 Allow: /
