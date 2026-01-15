@@ -13,8 +13,6 @@ Configurações específicas para o Googlebot
 User-agent: Googlebot
 Allow: /
 
-Nota: O Google ignora a diretiva Crawl-delay.
-
 Configurações específicas para o Bingbot
 
 User-agent: Bingbot
